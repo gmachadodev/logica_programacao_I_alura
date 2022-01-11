@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// funcao para pular linha
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	// funcao para exibir texto no HTML
+	function mostra(texto){
+		document.write(texto);
+		pulaLinha();
+	}
+
+	// funcao para calcular quantos anos se passaram desde a descoberta ate o ano atual
+	function anosPassados(descoberta, atual){
+		var passados = atual - descoberta;
+		return passados;
+	}
+
+	// funcao para calcular quantas geracoes se passaram desde a descoberta
+	function calculaGeracoes(totalAnosPassados, geracao){
+		var totalGeracoes = totalAnosPassados / geracao;
+		return totalGeracoes;
+	}
+
+	// funcao para exibir titulo
+	function exibeTitulo(titulo){
+		document.write("<h1>" + titulo + "</h1>");
+		pulaLinha();
+	}
+
+	var anoDescoberta = 1500;		// ano de descoberta do Brasil pelos portugueses
+	var anoAtual = 2021;
+	var mediaAnosGeracao = 28;		// média de anos que um casal tem filhos
+
+	// 
+	var anosPassados = anosPassados(anoDescoberta, anoAtual);
+
+	exibeTitulo("Programa de cálculo de gerações, desde a chegada dos portugueses no Brasil!");
+
+	mostra("Desde 1500 já se passaram " + anosPassados + " anos!");
+
+	// mostra(anosPassados);
+
+	var geracoes = calculaGeracoes(anosPassados, mediaAnosGeracao);
+
+	mostra("Considerando gerações com uma média de " + mediaAnosGeracao + " anos...")
+
+	mostra("Temos um total de " + Math.round(geracoes) + " gerações, desde a colonização do Brasil!");
+
+</script>

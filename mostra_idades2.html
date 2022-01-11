@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+	
+
+	function pulaLinha(){
+		document.write("<br><hr><br>");		// a tag <hr> pula uma linha e cria uma linha na página
+	}
+
+	function mostra(texto){
+		document.write("<big>" + texto + "</big>");		// a tage big aumenta o texto dentro dela
+		pulaLinha();
+	}
+
+	var ano = 2021;
+
+	mostra("Eu nasci em: " + (ano - 24));
+	mostra("Adriano nasceu em: " + (ano - 27));
+	mostra("Paulo nasceu em: " + (ano - 32));	
+
+
+
+</script>
